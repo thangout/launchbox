@@ -17,6 +17,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
 
+<link rel="import" href="../bower_components/neon-animation/animations/slide-from-right-animation.html">
+<link rel="import" href="../bower_components/neon-animation/animations/slide-left-animation.html">
+
 <dom-module id="my-order">
   <template>
     <style is="custom-style">
@@ -73,11 +76,16 @@ paper-card.rate { @apply(--layout-horizontal); }
       background: #4285f4;
       color: #fff ;
     }
-
-    paper-item{
-        border-bottom: 1px solid #E0E0E0;
-    }
     </style>
+
+    <neon-animated-pages id="pages" class="flex" selected="2" entry-animation="slide-from-right-animation" exit-animation="slide-left-animation">
+  <neon-animatable>1</neon-animatable>
+  <neon-animatable>2</neon-animatable>
+  <neon-animatable>3</neon-animatable>
+  <neon-animatable>4</neon-animatable>
+  <neon-animatable>5</neon-animatable>
+</neon-animated-pages>
+
     <h1>Order food</h1>
     <a href="/order-pickchild">
       <paper-button class="" style="position: absolute; right: 0; top: 100px">Order
@@ -97,7 +105,7 @@ paper-card.rate { @apply(--layout-horizontal); }
 <iron-pages selected="{{selected}}" >
   <!-- PAGE 1 -->
   <div>
-    <div class="container flex-wrap">
+    <div class="container flex-wrap" entry-animation="slide-from-right-animation">
       <div>
         <paper-card image="/images/food1.jpeg"   alt="Emmental">
           <div class="card-content">

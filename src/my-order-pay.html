@@ -6,7 +6,10 @@
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/paper-toast/paper-toast.html">
+<link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
 
+<link rel="import" href="../bower_components/neon-animation/animations/scale-up-animation.html">
+<link rel="import" href="../bower_components/neon-animation/animations/fade-out-animation.html">
 
 <dom-module id="my-order-pay">
   <!-- Defines the element's style and local DOM -->
@@ -76,16 +79,27 @@
     <div>
     </div>
     
-      <paper-button raised class="full-width" onclick="console.log(Polymer.dom().openToast)">Pay</paper-button>
-    <paper-toast id="toast0" text="This toast auto-closes after 3 seconds"></paper-toast>
+    <a href="">
+      <paper-button raised class="full-width" on-tap="openToast">Pay</paper-button>
+      </a>
+
+    <paper-dialog id="modal" entry-animation="scale-up-animation"
+              exit-animation="fade-out-animation">
+    <div style="text-align: center;  color: green">
+      <iron-icon style="font-size: 30px"  icon="icons:check"></iron-icon>
+    </div>
+    <h2>Successfuly paid</h2>
+</paper-dialog>
   </template>
   <!-- Creates the element's prototype and registers it -->
   <script>
     Polymer({
       is: 'my-order-pay',
       openToast: function() {
-        this.$.toast0.open();
-        console.log("aoj");
+        this.$.modal.open();
+        setTimeout(function() {
+          window.location = "/view1";
+        }, 3500);
       }
     });
   </script>
