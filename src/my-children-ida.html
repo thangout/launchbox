@@ -8,7 +8,7 @@
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
 
-<dom-module id="my-children-casper">
+<dom-module id="my-children-ida">
   <!-- Defines the element's style and local DOM -->
   <template>
     <style>
@@ -46,13 +46,11 @@
     <div>
       <a href="/new-view"><paper-icon-button icon="chevron-left" title="heart"></paper-icon-button></a>
     </div>
-    <div style="text-align: center;">
-      <iron-image style="width:300px; height:300px;" sizing="cover" src="/images/casper.png"></iron-image>
-      <h1>Casper</h1>
-      <h2>10 October 2009</h2>
-      <hr>
-      <h2>Level of activity<h2>
-    </div>
+    <iron-image style="width:300px; height:300px;" sizing="cover" src="/images/ida.png"></iron-image>
+    <h1>Ida</h1>
+    <h2>13 September 2014</h2>
+    <hr>
+    <h2>Level of activity<h2>
     <!-- <paper-slider pin value="20"></paper-slider> -->
     <paper-progress value="60" class="green"></paper-progress>
     <iron-image style="width:400px; height:300px;" sizing="cover" src="/images/sports.png"></iron-image>
@@ -62,7 +60,7 @@
     <div role="listbox">
       <paper-item>Lactose<paper-toggle-button noink></paper-toggle-button></paper-item>
       <paper-item>Nuts<paper-toggle-button checked noink></paper-toggle-button></paper-item>
-      <paper-item>Gluten<paper-toggle-button noink></paper-toggle-button></paper-item>
+      <paper-item>Gluten<paper-toggle-button checked noink></paper-toggle-button></paper-item>
     </div>  
 
 
@@ -70,7 +68,7 @@
   <!-- Creates the element's prototype and registers it -->
   <script>
     Polymer({
-      is: 'my-children-casper'
+      is: 'my-children-ida'
     });
   </script>
 </dom-module>

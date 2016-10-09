@@ -2,6 +2,10 @@
 <link rel="import" href="../bower_components/paper-slider/paper-slider.html">
 <link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
 <link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../bower_components/iron-icons/maps-icons.html">
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 
 <dom-module id="my-new-view">
@@ -18,16 +22,89 @@
         color: inherit;
         text-decoration: none;
         }
+
+        .addButton{
+          margin-top: 20px;
+        }
+    paper-item{
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+    .avatar{
+      display: block;
+      float: left;
+      margin-right: 20px;
+    }
+
+    .name{
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .secondary{
+      color: grey;
+    }
+
+    paper-item{
+      padding-top: 10px;
+      padding-bottom: 17px;
+    }
+
+    .info{
+      position: absolute;
+      bottom: 30px;
+      right: 0;
+    }
+
     </style>
 
     <h1>Your children</h1>
 
     <div role="listbox">
-      <a href="/children-casper" class="paper-item-link"><paper-item>Casper</paper-item></a>
-      <paper-item>Ida</paper-item>
-      <paper-item>Jesper</paper-item>
-    </div>
-    
+      <a href="/children-casper" class="paper-item-link">
+        <paper-item>
+          <div class="avatar blue" item-icon>
+            <img src="/images/kid1.png"> 
+          </div>
+          <paper-item-body two-line>
+          <div class="name">Casper</div>
+            <div class="secondary" secondary>Oct 10, 2009</div>
+          </paper-item-body>
+            <div class="info">
+              <iron-icon icon="maps:directions-walk"></iron-icon>
+              1500 steps
+              |
+              <iron-icon icon="maps:directions-run"></iron-icon> 150 m
+              |
+              <iron-icon icon="maps:terrain"></iron-icon>
+              13 stairs 
+            </div>
+        </paper-item>
+        </a>
+      <br>
+      <a href="/children-ida" class="paper-item-link">
+        <paper-item>
+          <div class="avatar blue" item-icon>
+            <img src="/images/kid2.png"> 
+          </div>
+          <paper-item-body two-line>
+          <div class="name">Ida</div>
+            <div class="secondary" secondary>Sept 13, 2011</div>
+          </paper-item-body>
+            <div class="info">
+              <iron-icon icon="maps:directions-walk"></iron-icon>
+              350 steps
+              |
+              <iron-icon icon="maps:directions-run"></iron-icon> 14 m
+              |
+              <iron-icon icon="maps:terrain"></iron-icon>
+              8 stairs 
+            </div>
+        </paper-item>
+        </a>
+    </div> 
+
+     <paper-fab class="addButton" icon="add" title="add"></paper-fab>
 
   </template>
   <!-- Creates the element's prototype and registers it -->

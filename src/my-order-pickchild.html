@@ -27,7 +27,15 @@
 
       paper-item{
         border-bottom: 1px solid #E0E0E0;
+        padding-top: 17px;
+        padding-bottom: 17px;
       }
+
+      .avatar{
+      display: block;
+      float: left;
+      margin-right: 20px;
+    }
     </style>
 
     <h1>Pick children</h1>
@@ -38,9 +46,19 @@
     </a>
 
     <div role="listbox">
-      <paper-item>Jesper<paper-checkbox></paper-checkbox></paper-item>
-      <paper-item>Ida<paper-checkbox></paper-checkbox></paper-item>
-      <paper-item>Jesper<paper-checkbox></paper-checkbox></paper-item>
+      <paper-item>
+          <div class="avatar blue" item-icon>
+            <img src="/images/kid1.png"> 
+          </div>
+           Jesper
+      <paper-checkbox></paper-checkbox></paper-item>
+
+      <paper-item>
+          <div class="avatar blue" item-icon>
+            <img src="/images/kid2.png"> 
+          </div>
+        Ida
+      <paper-checkbox></paper-checkbox></paper-item>
     </div>  
 
   </template>

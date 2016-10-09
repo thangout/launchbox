@@ -74,19 +74,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <!-- Drawer content -->
       <app-drawer>
         <app-toolbar>Menu</app-toolbar>
-        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="view1" href="/view1">Dashboard</a>
-          <a name="view2" href="/view2">View Two</a>
+        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list"  role="navigation">
+          <a name="view1" href="/view1" on-click="togglePanel()" >Dashboard</a>
+<!--           <a name="view2" href="/view2">View Two</a>
           <a name="view3" href="/view3">View Three</a>
-          <a name="new-view" href="/new-view">My children</a>
-
+ -->          <a name="new-view" href="/new-view">My children</a>
 
             <!-- debugging -->
-          <a name="children-casper" href="/children-casper">Casper</a>
+<!--           <a name="children-casper" href="/children-casper">Casper</a>
           <a name="order" href="/order">Order</a>
           <a name="order-pickchild" href="/order-pickchild">PickChild</a>
           <a name="order-pay" href="/order-pay">Pay order</a>
-        </iron-selector>
+ -->        </iron-selector>
       </app-drawer>
 
       <!-- Main content -->
@@ -110,6 +109,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <my-view404 name="view404"></my-view404>
           <my-new-view name="new-view"></my-new-view>
           <my-children-casper name="children-casper"></my-children-casper>
+          <my-children-ida name="children-ida"></my-children-ida  >
           <my-order name="order"></my-order>
           <my-order-pickchild name="order-pickchild"></my-order-pickchild>
           <my-order-pay name="order-pay"></my-order-pay>

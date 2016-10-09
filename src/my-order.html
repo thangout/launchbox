@@ -78,14 +78,6 @@ paper-card.rate { @apply(--layout-horizontal); }
     }
     </style>
 
-    <neon-animated-pages id="pages" class="flex" selected="2" entry-animation="slide-from-right-animation" exit-animation="slide-left-animation">
-  <neon-animatable>1</neon-animatable>
-  <neon-animatable>2</neon-animatable>
-  <neon-animatable>3</neon-animatable>
-  <neon-animatable>4</neon-animatable>
-  <neon-animatable>5</neon-animatable>
-</neon-animated-pages>
-
     <h1>Order food</h1>
     <a href="/order-pickchild">
       <paper-button class="" style="position: absolute; right: 0; top: 100px">Order
@@ -105,7 +97,7 @@ paper-card.rate { @apply(--layout-horizontal); }
 <iron-pages selected="{{selected}}" >
   <!-- PAGE 1 -->
   <div>
-    <div class="container flex-wrap" entry-animation="slide-from-right-animation">
+    <div class="container flex-wrap">
       <div>
         <paper-card image="/images/food1.jpeg"   alt="Emmental">
           <div class="card-content">
@@ -192,14 +184,143 @@ paper-card.rate { @apply(--layout-horizontal); }
     </div>  
   </div>
 
-  <div>Page 3
-
+  <!-- PAGE3 -->
+  <div>
+    <div class="container flex-wrap">
+      <div>
+        <paper-card image="/images/food1.jpeg"   alt="Emmental">
+          <div class="card-content">
+          <h2>Meatballs</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox >Order</paper-checkbox> 
+            <paper-button>20 DKK</paper-button>
+          </div>
+          </paper-card>
+      </div>
+      <div>
+        <paper-card image="/images/food2.jpeg" alt="Emmental">
+          <div class="card-content">
+          <h2>Crispy bacon</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox>Order</paper-checkbox> 
+            <paper-button>25 DKK</paper-button>
+          </div>
+        </paper-card>
+      </div>
+      <div>
+        <paper-card image="/images/food3.jpeg" alt="Emmental">
+          <div class="card-content">
+          <h2>Tortillas</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox>Order</paper-checkbox> 
+            <paper-button>29 DKK</paper-button>
+          </div>
+        </paper-card>
+      </div>
+      <div>
+        <paper-card image="/images/food4.jpeg" alt="Emmental">
+          <div class="card-content">
+          <h2>Muffins</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox>Order</paper-checkbox> 
+            <paper-button>15 DKK</paper-button>
+          </div>
+        </paper-card>
+      </div>
+    </div>  
   </div>
 
-  <div>Page 4
+  <!-- PAGE 4 -->
+  <div>
+    <div class="container flex-wrap">
+        <div>
+          <paper-card image="/images/food5.jpeg"   alt="Emmental">
+            <div class="card-content">
+            <h2>Avo-salad</h2>
+            </div>
+            <div class="card-actions">
+              <paper-checkbox>Order</paper-checkbox> 
+              <paper-button>30 DKK</paper-button>
+            </div>
+            </paper-card>
+        </div>
+        <div>
+          <paper-card image="/images/food6.jpeg" alt="Emmental">
+            <div class="card-content">
+            <h2>Cuscous</h2>
+            </div>
+            <div class="card-actions">
+              <paper-checkbox>Order</paper-checkbox> 
+              <paper-button>25 DKK</paper-button>
+            </div>
+          </paper-card>
+        </div>
+        <div>
+          <paper-card image="/images/food7.jpeg" alt="Emmental">
+            <div class="card-content">
+            <h2>Cupcakes</h2>
+            </div>
+            <div class="card-actions">
+              <paper-checkbox>Order</paper-checkbox> 
+              <paper-button>19 DKK</paper-button>
+            </div>
+          </paper-card>
+        </div>
+      </div>  
   </div>
 
-  <div>Page 5
+  <!-- page 5 -->
+  <div>
+      <div class="container flex-wrap">
+      <div>
+        <paper-card image="/images/food1.jpeg"   alt="Emmental">
+          <div class="card-content">
+          <h2>Meatballs</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox >Order</paper-checkbox> 
+            <paper-button>20 DKK</paper-button>
+          </div>
+          </paper-card>
+      </div>
+      <div>
+        <paper-card image="/images/food2.jpeg" alt="Emmental">
+          <div class="card-content">
+          <h2>Crispy bacon</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox>Order</paper-checkbox> 
+            <paper-button>25 DKK</paper-button>
+          </div>
+        </paper-card>
+      </div>
+      <div>
+        <paper-card image="/images/food3.jpeg" alt="Emmental">
+          <div class="card-content">
+          <h2>Tortillas</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox>Order</paper-checkbox> 
+            <paper-button>29 DKK</paper-button>
+          </div>
+        </paper-card>
+      </div>
+      <div>
+        <paper-card image="/images/food4.jpeg" alt="Emmental">
+          <div class="card-content">
+          <h2>Muffins</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox>Order</paper-checkbox> 
+            <paper-button>15 DKK</paper-button>
+          </div>
+        </paper-card>
+      </div>
+    </div>  
   </div>
 </iron-pages>
 
