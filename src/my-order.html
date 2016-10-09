@@ -73,11 +73,17 @@ paper-card.rate { @apply(--layout-horizontal); }
       background: #4285f4;
       color: #fff ;
     }
+
+    paper-item{
+        border-bottom: 1px solid #E0E0E0;
+    }
     </style>
     <h1>Order food</h1>
-    <paper-button class="" style="position: absolute; right: 0; top: 100px">Order
-    <iron-icon icon="icons:chevron-right"></iron-icon>
-    </paper-button>
+    <a href="/order-pickchild">
+      <paper-button class="" style="position: absolute; right: 0; top: 100px">Order
+      <iron-icon icon="icons:chevron-right"></iron-icon>
+      </paper-button>
+    </a>
 <div style="">
   <paper-tabs selected="{{selected}}">
     <paper-tab>Mon</paper-tab>

@@ -1,0 +1,92 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-slider/paper-slider.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-radio-button/paper-radio-button.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-toast/paper-toast.html">
+
+
+<dom-module id="my-order-pay">
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style>
+      :host {
+        display: block;
+
+        padding: 16px;
+      }
+
+      .paper-item-link {
+        color: inherit;
+        text-decoration: none;
+        }
+
+      .price{
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+      }
+
+      .total-price{
+        border-top: 2px solid black;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      .full-width{
+        width: 100%;
+        background-color: var(--paper-blue-a200);
+        color: #fff;
+        margin-top: 20px;
+      }
+
+
+    paper-item{
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+    .pay-card img{
+      width: 60px;
+      height: 60px;
+    }
+
+    .pay-card paper-radio-button{
+      margin-right: 20px;
+    }
+
+    </style>
+
+    <h1>Payment</h1>
+
+    <div role="listbox">
+      <paper-item>1 x Meatballs <span class="price">20 DKK</span></paper-item>
+      <paper-item>1 x Avo-salad<span class="price">30 DKK</span></paper-item>
+      <paper-item>1 x Cupcakes <span class="price">19 DKK</span></paper-item>
+      <paper-item class="total-price">Total: <span class="price">69 DKK</span></paper-item>
+    </div>
+
+    <h3>Select the payment method</h3>
+    <paper-radio-group class="pay-card" aria-labelledby="label1">
+      <paper-radio-button name="a"><img src="/images/visa.png"></paper-radio-button>
+      <paper-radio-button name="b"><img src="/images/master.png"></paper-radio-button>
+      <paper-radio-button name="d"><img src="/images/mobile.png"></paper-radio-button>
+    </paper-radio-group>
+    <div>
+    </div>
+    
+      <paper-button raised class="full-width" onclick="console.log(Polymer.dom().openToast)">Pay</paper-button>
+    <paper-toast id="toast0" text="This toast auto-closes after 3 seconds"></paper-toast>
+  </template>
+  <!-- Creates the element's prototype and registers it -->
+  <script>
+    Polymer({
+      is: 'my-order-pay',
+      openToast: function() {
+        this.$.toast0.open();
+        console.log("aoj");
+      }
+    });
+  </script>
+</dom-module>

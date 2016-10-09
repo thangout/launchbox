@@ -4,7 +4,7 @@
 <link rel="import" href="../bower_components/paper-item/paper-item.html">
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 
-<dom-module id="my-new-view">
+<dom-module id="my-order-pickchild">
   <!-- Defines the element's style and local DOM -->
   <template>
     <style>
@@ -18,22 +18,36 @@
         color: inherit;
         text-decoration: none;
         }
+
+      paper-checkbox{
+        position: absolute;
+        right: 0;
+        top: 30%;
+      }
+
+      paper-item{
+        border-bottom: 1px solid #E0E0E0;
+      }
     </style>
 
-    <h1>Your children</h1>
+    <h1>Pick children</h1>
+    <a href="/order-pay">
+      <paper-button class="" style="position: absolute; right: 0; top: 100px">Next
+      <iron-icon icon="icons:chevron-right"></iron-icon>
+      </paper-button>
+    </a>
 
     <div role="listbox">
-      <a href="/children-casper" class="paper-item-link"><paper-item>Casper</paper-item></a>
-      <paper-item>Ida</paper-item>
-      <paper-item>Jesper</paper-item>
-    </div>
-    
+      <paper-item>Jesper<paper-checkbox></paper-checkbox></paper-item>
+      <paper-item>Ida<paper-checkbox></paper-checkbox></paper-item>
+      <paper-item>Jesper<paper-checkbox></paper-checkbox></paper-item>
+    </div>  
 
   </template>
   <!-- Creates the element's prototype and registers it -->
   <script>
     Polymer({
-      is: 'my-new-view'
+      is: 'my-order-pickchild' 
     });
   </script>
 </dom-module>
