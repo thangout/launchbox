@@ -8,6 +8,10 @@
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
 
+
+<link rel="import" href="../bower_components/neon-animation/animations/slide-from-right-animation.html">
+<link rel="import" href="../bower_components/neon-animation/animations/slide-left-animation.html">
+
 <dom-module id="my-children-ida">
   <!-- Defines the element's style and local DOM -->
   <template>
@@ -76,6 +80,13 @@
       <paper-item>Gluten<paper-toggle-button checked noink></paper-toggle-button></paper-item>
     </div>  
 
+<neon-animated-pages id="pages" class="flex" selected="[[selected]]" entry-animation="slide-from-right-animation" exit-animation="slide-left-animation">
+  <neon-animatable>1</neon-animatable>
+  <neon-animatable>2</neon-animatable>
+  <neon-animatable>3</neon-animatable>
+  <neon-animatable>4</neon-animatable>
+  <neon-animatable>5</neon-animatable>
+</neon-animated-pages>
 
   </template>
   <!-- Creates the element's prototype and registers it -->
