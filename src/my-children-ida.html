@@ -42,18 +42,31 @@
       paper-item{
         border-bottom: 1px solid #E0E0E0;
       }
+
+        span.number{
+        position: absolute;
+        right: 0;
+        top: 30%;
+      }
     </style>
     <div>
       <a href="/new-view"><paper-icon-button icon="chevron-left" title="heart"></paper-icon-button></a>
     </div>
-    <iron-image style="width:300px; height:300px;" sizing="cover" src="/images/ida.png"></iron-image>
-    <h1>Ida</h1>
-    <h2>13 September 2014</h2>
-    <hr>
-    <h2>Level of activity<h2>
-    <!-- <paper-slider pin value="20"></paper-slider> -->
-    <paper-progress value="60" class="green"></paper-progress>
-    <iron-image style="width:400px; height:300px;" sizing="cover" src="/images/sports.png"></iron-image>
+   <div style="text-align: center;">
+      <iron-image style="width:300px; height:300px;" sizing="cover" src="/images/ida.png"></iron-image>
+      <h1>Ida</h1>
+      <hr>
+      <h3>13 September 2011</h3>
+      <div style="width: 50%; margin: 0 auto"  role="listbox">
+        <paper-item>Weight <span class="number">40 kg</span></paper-item>
+        <paper-item>Height <span class="number">110 cm</span></paper-item>
+      </div>
+      <h2>Level of activity<h2>
+      <paper-progress value="60" class="green"></paper-progress>
+    </div>
+
+    <div class="margin: 0 auto">
+      <img sizing="cover" width="480px" src="/images/sports.png"></img>
     </div>
 
     <h2>Alergies</h2>
