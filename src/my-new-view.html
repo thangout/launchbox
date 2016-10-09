@@ -1,0 +1,39 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-slider/paper-slider.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+
+<dom-module id="my-new-view">
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style>
+      :host {
+        display: block;
+
+        padding: 16px;
+      }
+
+      .paper-item-link {
+        color: inherit;
+        text-decoration: none;
+        }
+    </style>
+
+    <h1>Your childred</h1>
+
+    <div role="listbox">
+      <a href="/children-casper" class="paper-item-link"><paper-item>Casper</paper-item></a>
+      <paper-item>Ida</paper-item>
+      <paper-item>Jesper</paper-item>
+    </div>
+    
+
+  </template>
+  <!-- Creates the element's prototype and registers it -->
+  <script>
+    Polymer({
+      is: 'my-new-view'
+    });
+  </script>
+</dom-module>

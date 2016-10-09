@@ -1,0 +1,58 @@
+t<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-view1">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      paper-card{
+        width: 100%;
+      }
+
+       paper-card.white {
+          --paper-card-header-color: #fff;
+        }
+
+    </style>
+    <paper-card heading="Monday is coming soon" class="white" image="/images/monday.jpg" alt="Emmental">
+    <div class="card-content">
+      All you need to do is place an order and we’ll make sure to deliver the food at the given time and place. 
+    </div>
+    <div class="card-actions">
+      <a href="/order"><paper-button>Order food now</paper-button>
+      </a>
+    </div>
+  </paper-card> 
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-view1'
+    });
+  </script>
+</dom-module>

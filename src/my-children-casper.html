@@ -1,0 +1,74 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-slider/paper-slider.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-progress/paper-progress.html">
+<link rel="import" href="../bower_components/paper-toggle-button/paper-toggle-button.html">
+
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+
+<dom-module id="my-children-casper">
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style>
+      :host {
+        display: block;
+
+        padding: 16px;
+      }
+
+      .paper-item-link {
+        color: inherit;
+        text-decoration: none;
+        }
+
+      :host paper-slider{
+        width: 100%;
+      }
+
+      paper-progress.green {
+      --paper-progress-active-color: var(--paper-light-green-500);
+      --paper-progress-secondary-color: var(--paper-light-green-100);
+      width: 100%;
+      }
+
+      paper-toggle-button{
+        position: absolute;
+        right: 0;
+        top: 30%;
+      }
+
+      paper-item{
+        border-bottom: 1px solid #E0E0E0;
+      }
+    </style>
+    <div>
+      <a href="/new-view"><paper-icon-button icon="chevron-left" title="heart"></paper-icon-button></a>
+    </div>
+    <iron-image style="width:300px; height:300px;" sizing="cover" src="/images/casper.png"></iron-image>
+    <h1>Casper</h1>
+    <h2>10 October 2009</h2>
+    <hr>
+    <h2>Level of activity<h2>
+    <!-- <paper-slider pin value="20"></paper-slider> -->
+    <paper-progress value="60" class="green"></paper-progress>
+    <iron-image style="width:400px; height:300px;" sizing="cover" src="/images/sports.png"></iron-image>
+    </div>
+
+    <h2>Alergies</h2>
+    <div role="listbox">
+      <paper-item>Lactose<paper-toggle-button noink></paper-toggle-button></paper-item>
+      <paper-item>Nuts<paper-toggle-button checked noink></paper-toggle-button></paper-item>
+      <paper-item>Gluten<paper-toggle-button noink></paper-toggle-button></paper-item>
+    </div>  
+
+
+  </template>
+  <!-- Creates the element's prototype and registers it -->
+  <script>
+    Polymer({
+      is: 'my-children-casper'
+    });
+  </script>
+</dom-module>

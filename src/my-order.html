@@ -1,0 +1,207 @@
+t<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
+
+<dom-module id="my-order">
+  <template>
+    <style is="custom-style">
+      :host {
+        display: block;
+
+        padding: 10px;
+
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      paper-card{
+        width: 100%;
+      }
+
+paper-card.rate { @apply(--layout-horizontal); }
+  .rate-image {
+    width: 100px;
+    height: 170px;
+    background: url('/images/drag_food1.png');
+    background-size: cover;
+  }
+  .rate-content {
+    @apply(--layout-flex);
+    float: left;
+  }
+  .rate-header { @apply(--paper-font-headline); }
+  .rate-name { color: var(--paper-grey-600); margin: 10px 0; }
+  paper-icon-button.rate-icon {
+    --iron-icon-fill-color: white;
+    --iron-icon-stroke-color: var(--paper-grey-600);
+  }
+
+    paper-tabs{
+      --paper-tabs-selection-bar-color: #000;
+    }
+
+  .flex-wrap {
+    @apply(--layout-horizontal);
+    @apply(--layout-wrap);
+    width: 100% ; 
+    height: 400px; 
+    }
+
+    .flex-wrap > div{
+      width: 48%;
+      margin: 4px;
+    }
+
+    paper-button.fancy {
+      background: #4285f4;
+      color: #fff ;
+    }
+    </style>
+    <h1>Order food</h1>
+    <paper-button class="" style="position: absolute; right: 0; top: 100px">Order
+    <iron-icon icon="icons:chevron-right"></iron-icon>
+    </paper-button>
+<div style="">
+  <paper-tabs selected="{{selected}}">
+    <paper-tab>Mon</paper-tab>
+    <paper-tab>Tue</paper-tab>
+    <paper-tab>Wed</paper-tab>
+    <paper-tab>Thu</paper-tab>
+    <paper-tab>Fri</paper-tab>
+  </paper-tabs>
+</div>
+
+<iron-pages selected="{{selected}}" >
+  <!-- PAGE 1 -->
+  <div>
+    <div class="container flex-wrap">
+      <div>
+        <paper-card image="/images/food1.jpeg"   alt="Emmental">
+          <div class="card-content">
+          <h2>Meatballs</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox >Order</paper-checkbox> 
+            <paper-button>20 DKK</paper-button>
+          </div>
+          </paper-card>
+      </div>
+      <div>
+        <paper-card image="/images/food2.jpeg" alt="Emmental">
+          <div class="card-content">
+          <h2>Crispy bacon</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox>Order</paper-checkbox> 
+            <paper-button>25 DKK</paper-button>
+          </div>
+        </paper-card>
+      </div>
+      <div>
+        <paper-card image="/images/food3.jpeg" alt="Emmental">
+          <div class="card-content">
+          <h2>Tortillas</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox>Order</paper-checkbox> 
+            <paper-button>29 DKK</paper-button>
+          </div>
+        </paper-card>
+      </div>
+      <div>
+        <paper-card image="/images/food4.jpeg" alt="Emmental">
+          <div class="card-content">
+          <h2>Muffins</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox>Order</paper-checkbox> 
+            <paper-button>15 DKK</paper-button>
+          </div>
+        </paper-card>
+      </div>
+    </div>  
+  </div>
+
+  <!-- PAGE 2 -->
+  <div>
+    <div class="container flex-wrap">
+      <div>
+        <paper-card image="/images/food5.jpeg"   alt="Emmental">
+          <div class="card-content">
+          <h2>Avo-salad</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox>Order</paper-checkbox> 
+            <paper-button>30 DKK</paper-button>
+          </div>
+          </paper-card>
+      </div>
+      <div>
+        <paper-card image="/images/food6.jpeg" alt="Emmental">
+          <div class="card-content">
+          <h2>Cuscous</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox>Order</paper-checkbox> 
+            <paper-button>25 DKK</paper-button>
+          </div>
+        </paper-card>
+      </div>
+      <div>
+        <paper-card image="/images/food7.jpeg" alt="Emmental">
+          <div class="card-content">
+          <h2>Cupcakes</h2>
+          </div>
+          <div class="card-actions">
+            <paper-checkbox>Order</paper-checkbox> 
+            <paper-button>19 DKK</paper-button>
+          </div>
+        </paper-card>
+      </div>
+    </div>  
+  </div>
+
+  <div>Page 3
+
+  </div>
+
+  <div>Page 4
+  </div>
+
+  <div>Page 5
+  </div>
+</iron-pages>
+
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-order',
+
+      properties: {
+        selected: {
+            value: 0 
+        }
+      }
+    });
+
+  </script>
+</dom-module>
